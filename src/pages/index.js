@@ -1,10 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import Navbar from "react-bootstrap/Navbar"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import LandingLayout from "../components/LandingLayout"
+import { Jumbotron, Container, Carousel } from "react-bootstrap"
+import MainBackground from "../components/MainBackground"
 
 class IndexPage extends React.Component {
   state = { loading: false, msg: null }
@@ -20,123 +19,58 @@ class IndexPage extends React.Component {
   render() {
     const { loading, msg } = this.state
     return (
-      <Layout>
-        <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-          </Navbar.Collapse>
-        </Navbar>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <div>
-            <p>
-              Welcome to your new Gatsby + Netlify Functions + Netlify Identity
-              site
-            </p>
-            <ul>
-              <li>
-                This site has statically generated marketing pages like this one
-                and <Link to="/page-2/">page 2.</Link>{" "}
-              </li>
-              <li>
-                It also has a dynamically generated clientside app guarded by
-                authentication:
-                <ul>
-                  <li>
-                    <Link to="/app/">
-                      <b>Go to App (with Netlify Identity)</b>
-                    </Link>{" "}
-                  </li>
-                </ul>
-              </li>
-              <li>
-                You can{" "}
-                <a href="https://github.com/sw-yx/jamstack-hackathon-starter">
-                  view source here
-                </a>
-              </li>
-              <li>
-                or see{" "}
-                <a href="https://youtu.be/bueXJInQt2c">
-                  the Youtube walkthrough
-                </a>
-              </li>
-              <li>
-                or
-                <a href="https://app.netlify.com/start/deploy?repository=https://github.com/sw-yx/jamstack-hackathon-starter&stack=cms">
-                  <img
-                    src="https://www.netlify.com/img/deploy/button.svg"
-                    alt="Deploy to Netlify"
-                  />
-                </a>
-              </li>
-            </ul>
-            <hr />
-            <p>
-              You can still access Netlify functions even on static "marketing
-              pages". This function is available at{" "}
-              <a href="/.netlify/functions/token-hider">
-                <code>/.netlify/functions/token-hider</code>
-              </a>{" "}
-              and it uses an API_SECRET environment variable that is hidden from
-              the frontend!
-            </p>
-            <button onClick={this.handleClick}>
-              {loading ? "Loading..." : "Call Lambda Function"}
-            </button>
-            <br />
+      <LandingLayout>
+        <Container fluid>
+          <Carousel >
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="holder.js/800x400?text=First slide&bg=373940"
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="holder.js/800x400?text=Second slide&bg=282c34"
+              alt="Third slide"
+            />
 
-            {msg ? (
-              <img src={msg[Math.floor(Math.random() * 10)]} alt="dog"></img>
-            ) : (
-              <pre>"Click the button and watch this!"</pre>
-            )}
-          </div>
-          <div
-            style={{
-              borderLeft: "brown",
-              borderLeftStyle: "dashed",
-              paddingLeft: "3rem",
-            }}
-          >
-            <p>Now go build something great.</p>
-            <div style={{ maxWidth: "300px", marginBottom: "1.45rem" }}>
-              <Image />
-            </div>
-          </div>
-        </div>
-      </Layout>
+            <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="holder.js/800x400?text=Third slide&bg=20232a"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel></Container>
+        <Container/>
+        <Jumbotron fluid>
+          <Container>
+            <h1>Fluid jumbotron</h1>
+            <p>
+              This is a modified jumbotron that occupies the entire horizontal
+              space of its parent.
+            </p>
+          </Container>
+        </Jumbotron>
+      </LandingLayout>
     )
   }
 }

@@ -1,0 +1,22 @@
+.navbar-landing {
+  background-color: rgba(76, 175, 80, 0);
+}
+/* change the brand and text color */
+.navbar-landing .navbar-brand,
+.navbar-landing .navbar-text {
+  color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-landing .navbar-nav .nav-link {
+  color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-landing .nav-item.active .nav-link,
+.navbar-landing .nav-item:hover .nav-link {
+  color: #ffffff;
+}
+
+.carousel-inner{
+  width:100%;
+  max-height: 200px !important;
+}
