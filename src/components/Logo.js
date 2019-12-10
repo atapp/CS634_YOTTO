@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import Dark_Logo from "../images/Dark_Logo.png"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby"
  */
 
 const Logo = () => {
-  return <img src={"src/images/Dark_Logo.png"} />
+  return <img src={Dark_Logo} />
 }
 
 export default Logo
