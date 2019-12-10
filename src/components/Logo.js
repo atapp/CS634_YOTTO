@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby"
  */
 
 const Logo = () => {
-  return <img src={"/images/Dark_Logo.png?nf_resize=fit&w=150&h=60"} />
+  return <img src={"src/images/Dark_Logo.png"} />
 }
 
 export default Logo
