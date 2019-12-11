@@ -1,5 +1,5 @@
 import React from "react"
-import HomeImage from "../images/BAckground.png"
+//import HomeImage from "https://cs634-group1-hogg.netlify.com/src/images/BAckground.png"
 import Button_Background from "../images/Button_Background.png"
 import { Carousel } from "react-bootstrap"
 import { Link } from "gatsby"
@@ -11,7 +11,7 @@ const HomePageCarousel = () => {
         <div
           className="view align-items-center flex-column p-4"
           style={{
-            backgroundImage: `url(${HomeImage})`,
+            backgroundImage: `url(https://cs634-group1-hogg.netlify.com/src/images/BAckground.png)`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             minHeight: "100vh",
