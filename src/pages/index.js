@@ -1,8 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import LandingLayout from "../components/LandingLayout"
-import { Jumbotron, Container, Carousel, Row } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 import HomePageCarousel from "../components/HomePageCarousel"
 
 class IndexPage extends React.Component {
