@@ -13,7 +13,7 @@ import Dark_Logo from "../images/Dark_Logo.png"
  */
 
 const Logo = () => {
-  return <img src={Dark_Logo} />
+  return <img src={Dark_Logo} alt="Yotto Logo" />
 }
 
 export default Logo
